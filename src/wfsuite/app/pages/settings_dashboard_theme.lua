@@ -23,6 +23,7 @@ local THEME_DEFS = {
   {label = "@i18n(app.modules.settings.dashboard_theme_aerc)@", path = "system/aerc"},
   {label = "@i18n(app.modules.settings.dashboard_theme_aerc_n)@", path = "system/aerc-n"},
   {label = "@i18n(app.modules.settings.dashboard_theme_timer)@", path = "system/timer"},
+  {label = "@i18n(app.modules.settings.dashboard_theme_carbonpulse)@", path = "system/carbonpulse", minResolution = {x = 784, y = 294}},
   {label = "@i18n(app.modules.settings.dashboard_theme_claude)@", path = "system/claude"},
   {label = "@i18n(app.modules.settings.dashboard_theme_danielrc)@", path = "system/danielrc"},
   {label = "@i18n(app.modules.settings.dashboard_theme_default)@", path = "system/default"},

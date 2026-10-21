@@ -134,6 +134,7 @@ local DEFAULTS = {
 local DASHBOARD_THEMES = {
   ["aerc-n"] = true,
   aerc = true,
+  carbonpulse = true,
   claude = true,
   danielrc = true,
   default = true,

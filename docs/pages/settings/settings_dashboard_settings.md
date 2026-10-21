@@ -35,6 +35,24 @@ TODO: Verify persistence, reboot behaviour, profile scope and any restrictions i
 this page and its shared helpers. Codec defaults may be UI fallbacks rather than
 firmware defaults; wire values may need scaling before display.
 
+## Carbon Pulse
+
+**Carbon Pulse** sets when its readings are flagged and the scale of its rpm arc.
+These change only what the dashboard shows, not the flight controller.
+
+- **Power system → BEC critical**: 4.8 V; the BEC reading is flagged below it.
+- **Power system → BEC caution below**: 5.2 V; a caution below it. It stays above
+  BEC critical.
+- **Power system → Fuel warning**: 25 %; remaining fuel at or below it is flagged.
+- **Thermal limits → ESC warning** and **ESC maximum**: 110 °C and 150 °C, entered
+  in the chosen temperature unit. The maximum stays above the warning.
+- **Motor RPM arc → Arc maximum**: 1000 to 50000 rpm in steps of 100, default
+  10000: the rpm at a full arc. The arc is shaded amber from 75 % and red from
+  90 % of it. Set it to the motor's rpm at full throttle, or to its limit.
+- **Radio link → Link warning**: 50 %; a caution below it.
+
+Values are stored in the `dashboard.carbonpulse` section of `settings.ini`.
+
 ## KSE5
 
 **KSE5** sets the value at which each of its rings is full. A zero or missing

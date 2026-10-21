@@ -1,0 +1,8 @@
+-- Carbon Pulse for airplanes: neon-framed instruments on a dark face.
+-- Registration shape adapted from Studio Stratus 98. GPLv3.
+return {
+    key = "carbonpulse", name = "Carbon Pulse",
+    preflight = "preflight.lua", inflight = "inflight.lua", postflight = "postflight.lua",
+    configure = "configure.lua", standalone = false,
+    minResolution = {x = 784, y = 294},
+}

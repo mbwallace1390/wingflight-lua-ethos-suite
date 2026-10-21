@@ -38,6 +38,30 @@ TODO: Verify persistence, reboot behaviour, profile scope and any restrictions i
 this page and its shared helpers. Codec defaults may be UI fallbacks rather than
 firmware defaults; wire values may need scaling before display.
 
+## Carbon Pulse
+
+**Carbon Pulse** (`system/carbonpulse`) puts neon-blue chamfered panels on a flat
+near-black face, with a segmented motor rpm arc and condensed italic lettering.
+It draws its preflight screen before a flight and while armed on the ground, and
+its postflight screen after a flight, also once the link is lost after one. It
+needs a window of at least 784 × 294.
+
+- **Preflight**: the arm state, the flight timer with the last and total flight
+  time and the flight count, the PID and rate profiles, and a check panel with
+  lamps for pack, fuel, BEC, ESC and link. While the controller refuses to arm,
+  the headline reads ARM BLOCKED and the line below names the first reason, for
+  example `ARM BLOCKED: THROTTLE +2`.
+- **Inflight**: the motor rpm arc with the rpm in its centre, and the second
+  motor's rpm on a twin (`RPM / M2`), MCU temperature, throttle, altitude, link,
+  BEC, current and capacity used.
+- **Postflight**: flight time and average current, the peak rpm on the arc, peak
+  MCU and ESC temperature, peak current, capacity used and maximum altitude, with
+  the minimum link, cell, BEC, pack voltage and fuel.
+
+Set its warnings and the arc's full scale in
+[Dashboard Settings](settings_dashboard_settings.md). Postflight figures fill in
+once a flight has been recorded.
+
 ## KSE4 and KSE5
 
 **KSE4** (`system/kse4`) and **KSE5** (`system/kse5`) follow the layouts of
