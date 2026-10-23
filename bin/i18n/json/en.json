@@ -2496,6 +2496,12 @@
           "needs_translation": false,
           "max_length": 8
         },
+        "dashboard_theme_carbonpulse": {
+          "english": "Carbon Pulse",
+          "translation": "Carbon Pulse",
+          "needs_translation": false,
+          "max_length": 12
+        },
         "tx_battery_options": {
           "english": "Tx Battery Options",
           "max_length": 18,

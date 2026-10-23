@@ -21,6 +21,12 @@ You can change them via the Suite Menu "Settings - Dashboard - Theme"
 | --- | --- | --- |
 | ![Basic Timer preflight](Basic%20Timer/preflight.png) | ![Basic Timer inflight](Basic%20Timer/inflight.png) | ![Basic Timer postflight](Basic%20Timer/postflight.png) |
 
+## Carbon Pulse
+
+| Preflight | Inflight | Postflight |
+| --- | --- | --- |
+| ![Carbon Pulse preflight](Carbon%20Pulse/preflight.png) | ![Carbon Pulse inflight](Carbon%20Pulse/inflight.png) | ![Carbon Pulse postflight](Carbon%20Pulse/postflight.png) |
+
 ## Claude
 
 | Preflight | Inflight | Postflight |
