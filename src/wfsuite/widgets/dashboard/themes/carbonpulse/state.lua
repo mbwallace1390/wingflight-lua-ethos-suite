@@ -20,7 +20,13 @@ local ARM_SWITCH_BIT = 27
 -- @i18n tag: a theme folder copied onto the radio is not built.
 local ARM_SWITCH = "ARM SWITCH"
 do
+    -- Only the name is kept. A module this lookup loads is released again, so it
+    -- stays in memory only for the Suite code that loads it itself (the FBL
+    -- Status page, the dashboard's info panel).
+    local key = "wfsuite.lib.arming_flags"
+    local held = package.loaded[key]
     local ok, flags = pcall(requireModule, "lib/arming_flags.lua")
+    if held == nil then package.loaded[key] = nil end
     local name = ok and type(flags) == "table" and type(flags.FLAG_TAGS) == "table"
         and flags.FLAG_TAGS[ARM_SWITCH_BIT]
     -- An unbuilt Suite would still hold the raw tag, which contains "@".
